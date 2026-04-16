@@ -31,3 +31,16 @@ INSERT INTO workers VALUES
 (18, 'Andrze', 'LEWANDOWSKI', 30, 'Tester'),
 (19, 'Roman', 'KOWALCZYK', 39, 'Tester'),
 (20, 'Ewa', 'WOŹNIAK', 31, 'Tester'); 
+
+SELECT * FROM workers WHERE first_name = 'Anna';
+
+SELECT * FROM workers WHERE first_name IS NULL;
+
+SELECT DISTINCT course FROM workers where age BETWEEN 30 AND 40 AND course IS NOT NULL;
+
+SELECT id, age FROM workers WHERE ID <=7;
+
+SELECT * FROM workers WHERE age IS NULL;
+
+ALTER TABLE workers 
+RENAME COLUMN course TO training;
