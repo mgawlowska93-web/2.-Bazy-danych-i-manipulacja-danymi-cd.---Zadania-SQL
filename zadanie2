@@ -42,4 +42,16 @@ VALUES
     (18, 'Andrze', 'LEWANDOWSKI', 30, 'Tester'),
     (19, 'Roman', NULL, 39, 'Tester'),
     (20, 'Ewa', 'WOŹNIAK', 31, 'Tester');
+
+SELECT * FROM workers WHERE age = 28;
+
+SELECT * FROM workers WHERE age <= 30;
+
+SELECT * FROM workers WHERE last_name LIKE '%ski'; 
+
+SELECT * FROM workers WHERE  id IN (1,4,7,18,20);
+
+SELECT * FROM workers WHERE first_name IS NOT NULL AND last_name IS NOT NULL AND age is NOT NULL AND course IS NOT NULL;
+
+SELECT * FROM workers WHERE course NOT IN ('DS.');
     
