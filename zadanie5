@@ -32,3 +32,18 @@ INSERT INTO workers VALUES
 (19, 'Roman', 'KOWALCZYK', 39, NULL),
 (20, 'Ewa', 'WOŹNIAK', 31, NULL);
 
+
+SELECT DISTINCT first_name FROM workers WHERE first_name IS NOT NULL 
+ORDER BY first_name;
+
+SELECT DISTINCT last_name FROM workers WHERE last_name IS NOT NULL 
+ORDER BY last_name;
+
+SELECT DISTINCT course FROM workers WHERE last_name = 'KOWALCZYK'; 
+
+SELECT * FROM workers WHERE age IS NULL;
+
+SELECT age FROM workers where first_name = 'Patryk';
+
+ALTER TABLE workers 
+RENAME TO mentors;
