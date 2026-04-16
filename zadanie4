@@ -1,2 +1,12 @@
 CREATE DATABASE workers;
 
+USE workers;
+
+CREATE TABLE workers
+   (id INTEGER PRIMARY KEY, 
+   first_name VARCHAR (50),
+   last_name VARCHAR (50),
+   age INTEGER,
+   course VARCHAR (30)
+   );
+
