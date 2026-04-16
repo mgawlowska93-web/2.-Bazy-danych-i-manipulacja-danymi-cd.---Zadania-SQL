@@ -30,4 +30,21 @@ VALUES (1, 'Anna', 'NOWAK', 34, 'DS.'),
        (18, 'Andrzej', 'LEWANDOWSKI', 30, 'Tester'),
        (19, 'Roman', 'ZIELIŃSKI', 39, 'Tester'),
        (20, 'Ewa', 'WOŹNIAK', 31, 'Tester');
+------------------------------------------------------------
+USE workers;
+
+SELECT * FROM workers WHERE age>30;
+
+SELECT * FROM workers WHERE age<30;
+
+SELECT * FROM workers WHERE last_name LIKE 'K%ki'; 
+
+SELECT id NR, first_name, last_name from workers
+
+ALTER TABLE workers 
+RENAME COLUMN id TO nr;
+
+SELECT * FROM workers WHERE nr IS NULL OR first_name IS NULL OR last_name IS NULL OR age IS NULL or course IS NULL
+
+SELECT * FROM workers WHERE course = 'Java'
          
