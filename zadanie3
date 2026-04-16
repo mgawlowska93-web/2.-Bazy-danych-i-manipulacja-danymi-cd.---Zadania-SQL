@@ -10,7 +10,6 @@ CREATE TABLE workers
    course VARCHAR (30)
    );
 
-
 USE workers;
 
 CREATE TABLE workers
@@ -43,3 +42,15 @@ VALUES
     (18, 'Andrze', 'LEWANDOWSKI', 30, 'Tester'),
     (19, 'Roman', 'KOWALCZYK', 39, 'Tester'),
     (20, 'Ewa', 'WOŹNIAK', 31, 'Tester');
+
+SELECT * FROM workers WHERE last_name = 'Kowalczyk';
+
+SELECT * FROM workers WHERE age BETWEEN 30 AND 40;
+
+SELECT * FROM workers WHERE last_name NOT LIKE "%and%";
+
+SELECT * FROM workers WHERE id <= 7;
+
+SELECT * FROM workers WHERE first_name IS NULL OR last_name IS NULL OR age is NULL OR course IS NULL;
+
+SELECT * FROM workers WHERE course IS NULL;
